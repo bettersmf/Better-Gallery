@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.0.2
+
+Maintenance and stable-release audit update.
+
+### Fixed
+
+- Added the missing `bg_album` language fallback used after bulk media moves.
+- Prevented the related undefined-array-key warning in that fallback path.
+- Added direct upgrade support from Better Gallery 1.0.1.
+- Normalized Gallery asset cache and package version identifiers to 1.0.2.
+
+### Verified
+
+- Protected media and album-download permission enforcement
+- Upload extension/MIME/size/image validation
+- Better Reactions, Better Tags, Better Ads, Better Storage/S3, and Better Portal integrations
+- Install/uninstall hook symmetry
+- Data-preserving uninstall behavior
+- PHP/JavaScript syntax and package/language coverage
+
 ## 1.0.1
 
 Stable release promoted from the extensively tested **1.0.0-dev2zddb** development line.

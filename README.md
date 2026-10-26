@@ -27,11 +27,9 @@ Better Gallery turns SMF into a clean photo/video gallery experience while keepi
 
 ## Current Version
 
-**1.0.1**
+**1.0.2**
 
-Better Gallery 1.0.1 promotes the extensively tested 1.0.0-dev2zddb build to the next stable release.
-
-This release includes Better Tags album/media integration, media lightbox deep links, Theme Lab album-header/button polish, protected download fixes, Better Ads slots, storage/S3 work, and the Better Gallery identity rebrand.
+Better Gallery 1.0.2 is the current audited stable release. It includes the complete 1.0.1 feature set plus the missing `bg_album` language fallback used by the bulk media move workflow, a direct 1.0.1 upgrade path, and normalized stable asset/version identifiers.
 
 ## Compatibility
 

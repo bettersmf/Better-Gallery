@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "https://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+  <id>bettersmf:better-gallery</id>
+  <name>Better Gallery</name>
+  <version>1.0.2</version>
+  <type>modification</type>
+
+  <install for="2.1.7-2.1.8">
+    <readme>README.txt</readme>
+    <require-file name="Sources/BetterGallery.php" destination="$sourcedir" />
+    <require-file name="Sources/BetterGalleryBootstrap.php" destination="$sourcedir" />
+    <require-file name="Sources/BetterGalleryStorage.php" destination="$sourcedir" />
+    <require-file name="Themes/default/BetterGallery.template.php" destination="$themes_dir/default" />
+    <require-file name="Themes/default/languages/BetterGallery.english.php" destination="$themes_dir/default/languages" />
+    <require-file name="Themes/default/css/BetterGallery.css" destination="$themes_dir/default/css" />
+    <require-file name="Themes/default/images/BetterGallery/gallery_menu.png" destination="$themes_dir/default/images/BetterGallery" />
+    <require-file name="Themes/default/scripts/BetterGalleryUploader.js" destination="$themes_dir/default/scripts" />
+    <require-file name="Themes/default/scripts/BetterGalleryViewer.js" destination="$themes_dir/default/scripts" />
+    <require-file name="Themes/default/scripts/BetterGalleryBulk.js" destination="$themes_dir/default/scripts" />
+		<require-file name="Themes/default/images/admin/better_gallery.png" destination="$themes_dir/default/images/admin" />
+		<require-file name="Themes/default/images/admin/big/better_gallery.png" destination="$themes_dir/default/images/admin/big" />
+    <code>install.php</code>
+  </install>
+
+  <upgrade from="0.1.0-dev1,0.1.0-dev2,0.1.0-dev3,0.1.0-dev4,0.1.0-dev5,0.1.0-dev6,0.1.0-dev7,0.1.0-dev8,0.1.0-dev9,0.1.0-dev10,0.1.0-dev11,0.1.0-dev12,0.1.0-dev13,0.1.0-dev14,0.1.0-dev15,0.1.0-dev16,0.1.0-dev17,0.1.0-dev18,0.1.0-dev19,0.1.0-dev20,0.1.0-dev21,0.1.0-dev22,0.1.0-dev23,0.1.0-dev24,0.1.0-dev25,0.1.0-dev26,0.1.0-dev27,0.1.0-dev28,0.1.0-dev28a,0.1.0-dev29,0.1.0-dev29a,0.1.0-dev30,0.1.0-dev30a,0.1.0-dev30b,0.1.0-dev30c,0.1.0-dev30d,0.1.0-dev30e,0.1.0-dev31,0.1.0-dev31a,0.1.0-dev32,0.1.0-dev32a,0.1.0-dev32b,0.1.0-dev33,0.1.0-dev33a,0.1.0-dev33b,0.1.0-dev33c,0.1.0-dev34,0.1.0-dev34a,0.1.0-dev34b,0.1.0-dev34c,0.1.0-dev34d,0.1.0-dev34e,0.1.0-dev34f,0.1.0-dev34g,0.1.0-dev34h,0.1.0-dev34i,0.1.0-dev35,0.1.0-dev35a,0.1.0-dev36,0.1.0-dev37,0.1.0-dev38,0.1.0-dev39,0.1.0-dev40,0.1.0-dev41,0.1.0-dev42,0.1.0-dev43,0.1.0-dev44,0.1.0-dev45,0.1.0-dev46,0.1.0-dev47,0.1.0-dev48,0.1.0-dev49,0.1.0-dev50,0.1.0-dev50a,0.1.0-dev50b,0.1.0-dev50c,0.1.0-dev50d,0.1.0-dev51,0.1.0-dev51a,0.1.0-dev51b,0.1.0-dev51c,0.1.0-dev51d,0.1.0-dev51e,0.1.0-dev51f,0.1.0-dev51g,0.1.0-dev51h,0.1.0-dev51i,0.1.0-dev51j,0.1.0-dev51k,0.1.0-dev51l,0.1.0-dev51m,1.0.0,1.0.0-dev1,1.0.0-dev2,1.0.0-dev2a,1.0.0-dev2b,1.0.0-dev2c,1.0.0-dev2d,1.0.0-dev2e,1.0.0-dev2f,1.0.0-dev2g,1.0.0-dev2h,1.0.0-dev2i,1.0.0-dev2j,1.0.0-dev2k,1.0.0-dev2m,1.0.0-dev2n,1.0.0-dev2p,1.0.0-dev2q,1.0.0-dev2r,1.0.0-dev2s,1.0.0-dev2t,1.0.0-dev2u,1.0.0-dev2v,1.0.0-dev2w,1.0.0-dev2x,1.0.0-dev2y,1.0.0-dev2z,1.0.0-dev2za,1.0.0-dev2zb,1.0.0-dev2zc,1.0.0-dev2zd,1.0.0-dev2zda,1.0.0-dev2zdb,1.0.0-dev2zdc,1.0.0-dev2zdd,1.0.0-dev2zdda,1.0.0-dev2zddb,1.0.1" for="2.1.7-2.1.8">
+    <readme>README.txt</readme>
+    <require-file name="Sources/BetterGallery.php" destination="$sourcedir" />
+    <require-file name="Sources/BetterGalleryBootstrap.php" destination="$sourcedir" />
+    <require-file name="Sources/BetterGalleryStorage.php" destination="$sourcedir" />
+    <require-file name="Themes/default/BetterGallery.template.php" destination="$themes_dir/default" />
+    <require-file name="Themes/default/languages/BetterGallery.english.php" destination="$themes_dir/default/languages" />
+    <require-file name="Themes/default/css/BetterGallery.css" destination="$themes_dir/default/css" />
+    <require-file name="Themes/default/images/BetterGallery/gallery_menu.png" destination="$themes_dir/default/images/BetterGallery" />
+    <require-file name="Themes/default/scripts/BetterGalleryUploader.js" destination="$themes_dir/default/scripts" />
+    <require-file name="Themes/default/scripts/BetterGalleryViewer.js" destination="$themes_dir/default/scripts" />
+    <require-file name="Themes/default/scripts/BetterGalleryBulk.js" destination="$themes_dir/default/scripts" />
+		<require-file name="Themes/default/images/admin/better_gallery.png" destination="$themes_dir/default/images/admin" />
+		<require-file name="Themes/default/images/admin/big/better_gallery.png" destination="$themes_dir/default/images/admin/big" />
+    <code>install.php</code>
+  </upgrade>
+
+  <uninstall for="2.1.7-2.1.8">
+    <readme>README.txt</readme>
+    <code>uninstall-required.php</code>
+    <database>uninstall-data.php</database>
+    <remove-file name="$sourcedir/BetterGallery.php" />
+    <remove-file name="$sourcedir/BetterGalleryBootstrap.php" />
+    <remove-file name="$sourcedir/BetterGalleryStorage.php" />
+    <remove-file name="$themes_dir/default/BetterGallery.template.php" />
+    <remove-file name="$themes_dir/default/languages/BetterGallery.english.php" />
+    <remove-file name="$themes_dir/default/css/BetterGallery.css" />
+    <remove-file name="$themes_dir/default/images/BetterGallery/gallery_menu.png" />
+    <remove-file name="$themes_dir/default/scripts/BetterGalleryUploader.js" />
+    <remove-file name="$themes_dir/default/scripts/BetterGalleryViewer.js" />
+    <remove-file name="$themes_dir/default/scripts/BetterGalleryBulk.js" />
+  
+		<remove-file name="$themes_dir/default/images/admin/better_gallery.png" />
+		<remove-file name="$themes_dir/default/images/admin/big/better_gallery.png" />
+	</uninstall>
+</package-info>

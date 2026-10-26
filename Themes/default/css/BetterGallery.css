@@ -1,0 +1,3204 @@
+.bg_foundation{padding:18px}.bg_foundation_grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.bg_foundation_card{padding:14px;border:1px solid rgba(127,127,127,.25);border-radius:8px}.bg_foundation_card p{margin-bottom:0}.bg_health_summary{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}.bg_health_summary>div{min-width:110px;padding:12px;text-align:center;border:1px solid rgba(127,127,127,.25);border-radius:8px}.bg_health_summary strong,.bg_health_summary span{display:block}.bg_health_summary strong{font-size:1.6em}.bg_status{display:inline-block;min-width:52px;padding:3px 7px;border-radius:999px;font-weight:700;text-align:center}.bg_status_pass{background:#26734d;color:#fff}.bg_status_warn{background:#a66b00;color:#fff}.bg_status_fail{background:#9b2c2c;color:#fff}.bg_health_table{width:100%}.bg_health_table th,.bg_health_table td{padding:8px;vertical-align:top}
+
+
+.bg_gallery_toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.bg_album_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: 16px;
+}
+
+.bg_album_card {
+	display: block;
+	overflow: hidden;
+	border: 1px solid rgba(127,127,127,.25);
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.bg_album_cover {
+	aspect-ratio: 16 / 9;
+}
+
+.bg_album_cover_placeholder {
+	background: linear-gradient(135deg, rgba(127,127,127,.15), rgba(127,127,127,.3));
+}
+
+.bg_album_card_body {
+	padding: 14px;
+}
+
+.bg_album_card_body h3 {
+	margin: 0 0 6px;
+}
+
+.bg_album_card_body p {
+	min-height: 2.8em;
+}
+
+.bg_album_form,
+.bg_category_form {
+	display: grid;
+	gap: 12px;
+}
+
+.bg_album_form label,
+.bg_category_form label {
+	display: grid;
+	gap: 4px;
+}
+
+.bg_album_form input[type="text"],
+.bg_album_form input[type="password"],
+.bg_album_form textarea,
+.bg_album_form select,
+.bg_category_form input[type="text"],
+.bg_category_form input[type="number"],
+.bg_category_form textarea,
+.bg_category_form select {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.bg_inline_form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	gap: 8px;
+}
+
+.bg_inline_form label {
+	flex: 1 1 240px;
+}
+
+.bg_inline_form input[type="password"],
+.bg_inline_form textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.bg_category_row {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 12px;
+	align-items: end;
+	margin-bottom: 10px;
+}
+
+.bg_check {
+	display: flex !important;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	justify-content: start;
+}
+
+.bg_admin_panel{padding:18px}
+.bg_panel_intro{display:flex;flex-direction:column;gap:3px;margin-bottom:16px}
+.bg_category_card{padding:0;overflow:hidden;margin-bottom:14px;border:1px solid rgba(127,127,127,.22);border-radius:10px}
+.bg_category_card_header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px 10px;border-bottom:1px solid rgba(127,127,127,.16)}
+.bg_category_title_row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:1.08em}
+.bg_status_pill,.bg_count_badge{display:inline-flex;align-items:center;justify-content:center;min-height:20px;padding:2px 8px;border-radius:999px;font-size:.78em;font-weight:700;line-height:1}
+.bg_status_enabled{background:rgba(38,115,77,.9);color:#fff}
+.bg_status_disabled{background:rgba(127,127,127,.35)}
+.bg_count_badge{margin-left:6px;background:rgba(255,255,255,.15)}
+.bg_category_card_form{display:block;padding:16px}
+.bg_category_grid{display:grid;grid-template-columns:minmax(220px,1fr) minmax(180px,.7fr);gap:16px;align-items:start}
+.bg_field{display:flex;flex-direction:column;gap:6px;font-weight:600}
+.bg_field>span{line-height:1.2}
+.bg_field input,.bg_field textarea,.bg_field select{width:100%;box-sizing:border-box;font-weight:400}
+.bg_field textarea{resize:vertical;min-height:96px}
+.bg_field_description{grid-column:1/2}
+.bg_category_compact{display:grid;grid-template-columns:minmax(90px,130px) 1fr;gap:16px;align-items:end}
+.bg_toggle_field{display:flex;align-items:center;gap:7px;min-height:38px;font-weight:600}
+.bg_card_actions{display:flex;justify-content:flex-end;margin-top:16px;padding-top:12px;border-top:1px solid rgba(127,127,127,.14)}
+.bg_destructive_row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;border-top:1px solid rgba(127,127,127,.14);background:rgba(127,127,127,.04)}
+.bg_danger_button{font-weight:700}
+@media(max-width:720px){.bg_category_grid{grid-template-columns:1fr}.bg_field_description{grid-column:auto}.bg_category_compact{grid-template-columns:1fr 1fr}.bg_destructive_row{align-items:flex-start;flex-direction:column}}
+
+
+/* dev12: album discovery + search */
+.bg_gallery_search_form { display:grid; grid-template-columns:minmax(220px,1.4fr) minmax(160px,.8fr) minmax(170px,.75fr) auto auto; gap:12px; align-items:end; }
+.bg_gallery_search_form > label { display:flex; flex-direction:column; gap:5px; }
+.bg_gallery_search_form input[type="search"], .bg_gallery_search_form select { width:100%; box-sizing:border-box; }
+.bg_gallery_search_check { flex-direction:row !important; align-items:center; padding-bottom:8px; white-space:nowrap; }
+.bg_gallery_search_actions { display:flex; gap:6px; align-items:center; padding-bottom:1px; }
+.bg_gallery_result_summary { margin:0 0 10px; }
+.bg_locked_note { margin-top:10px; font-size:.9em; font-weight:700; opacity:.8; }
+@media (max-width:900px) { .bg_gallery_search_form { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .bg_gallery_search_form { grid-template-columns:1fr; } .bg_gallery_search_check { padding-bottom:0; white-space:normal; } }
+
+
+.bg_media_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 14px;
+}
+
+.bg_media_card {
+	display: block;
+	overflow: hidden;
+	border: 1px solid rgba(127,127,127,.24);
+	border-radius: 8px;
+	text-decoration: none;
+}
+
+.bg_media_card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.bg_media_card_body {
+	padding: 10px;
+}
+
+
+.bg_media_card video {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: contain;
+	background: #000;
+}
+
+
+/* dev17: media management + album covers */
+.bg_album_cover img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bg_media_description {
+	margin: 8px 0 0;
+}
+
+.bg_media_manage {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	margin-top: 10px;
+}
+
+.bg_media_manage form {
+	display: inline;
+	margin: 0;
+}
+
+.bg_cover_badge {
+	display: inline-block;
+	padding: 5px 9px;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 999px;
+	font-size: .85em;
+	font-weight: 700;
+}
+
+
+/* dev18: automatic cover fallbacks + restricted album lock treatment */
+.bg_album_cover_placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	text-align: center;
+}
+
+.bg_album_placeholder_icon {
+	display: block;
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.bg_album_placeholder_label {
+	display: block;
+	font-size: .9em;
+	font-weight: 700;
+	opacity: .82;
+}
+
+.bg_album_cover_locked .bg_album_placeholder_icon {
+	font-size: 3.35rem;
+}
+
+.bg_album_card_locked .bg_album_cover {
+	position: relative;
+}
+
+.bg_album_card_locked .bg_locked_note {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+
+/* dev20: compact media action icons */
+.bg_media_manage {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 7px;
+	margin-top: 10px;
+}
+
+.bg_media_manage form {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+}
+
+.bg_media_action {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	box-sizing: border-box;
+	padding: 0;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-size: 18px;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+	vertical-align: middle;
+	transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
+}
+
+.bg_media_action:hover,
+.bg_media_action:focus {
+	text-decoration: none;
+	background: rgba(127,127,127,.12);
+	transform: translateY(-1px);
+}
+
+.bg_media_action_cover_active {
+	cursor: default;
+	font-weight: 700;
+	background: rgba(127,127,127,.12);
+}
+
+.bg_media_action_cover_active:hover {
+	transform: none;
+}
+
+.bg_media_action_delete {
+	color: #c62828;
+	border-color: rgba(198,40,40,.35);
+}
+
+.bg_media_action_delete:hover,
+.bg_media_action_delete:focus {
+	background: rgba(198,40,40,.10);
+	border-color: rgba(198,40,40,.55);
+}
+
+
+/* dev21: uniform inline SVG media action icons */
+.bg_media_action {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.bg_media_action_icon {
+	display: block;
+	width: 18px;
+	height: 18px;
+	flex: 0 0 18px;
+	pointer-events: none;
+	overflow: visible;
+}
+
+.bg_media_action_edit .bg_media_action_icon,
+.bg_media_action_cover .bg_media_action_icon,
+.bg_media_action_delete .bg_media_action_icon {
+	color: currentColor;
+}
+
+.bg_media_action_cover_active .bg_media_action_icon {
+	width: 19px;
+	height: 19px;
+}
+
+.bg_media_action_delete .bg_media_action_icon {
+	width: 18px;
+	height: 18px;
+}
+
+
+/* dev22: drag-and-drop progress uploader */
+.bg_uploader {
+	display: block;
+}
+
+.bg_upload_dropzone {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	min-height: 180px;
+	padding: 24px;
+	border: 2px dashed rgba(127,127,127,.42);
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+
+.bg_upload_dropzone:hover,
+.bg_upload_dropzone:focus,
+.bg_upload_dropzone.is-dragover {
+	border-color: currentColor;
+	background: rgba(127,127,127,.08);
+	outline: none;
+}
+
+.bg_upload_dropzone.is-dragover {
+	transform: translateY(-1px);
+}
+
+.bg_upload_icon {
+	width: 42px;
+	height: 42px;
+	opacity: .86;
+}
+
+.bg_upload_browse_button {
+	pointer-events: none;
+	margin-top: 3px;
+}
+
+.bg_upload_native_input {
+	display: block;
+	margin-top: 10px;
+}
+
+.bg_uploader.is-enhanced .bg_upload_native_input {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.bg_upload_limits {
+	margin-top: 10px;
+	opacity: .85;
+}
+
+.bg_upload_notice {
+	margin-top: 10px;
+}
+
+.bg_upload_notice:empty {
+	display: none;
+}
+
+.bg_upload_queue {
+	display: grid;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+.bg_upload_item {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 6px 12px;
+	align-items: center;
+	padding: 10px 12px;
+	border: 1px solid rgba(127,127,127,.24);
+	border-radius: 8px;
+}
+
+.bg_upload_item_name {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: 700;
+}
+
+.bg_upload_item_meta {
+	font-size: .86em;
+	opacity: .78;
+	white-space: nowrap;
+}
+
+.bg_upload_progress {
+	grid-column: 1 / -1;
+	height: 8px;
+	overflow: hidden;
+	border-radius: 999px;
+	background: rgba(127,127,127,.18);
+}
+
+.bg_upload_progress_bar {
+	width: 0;
+	height: 100%;
+	background: currentColor;
+	opacity: .72;
+	transition: width .1s linear;
+}
+
+.bg_upload_item_status {
+	grid-column: 1 / -1;
+	font-size: .86em;
+}
+
+.bg_upload_item.is-complete .bg_upload_progress_bar {
+	opacity: 1;
+}
+
+.bg_upload_item.is-error {
+	border-color: rgba(198,40,40,.45);
+}
+
+.bg_upload_item.is-error .bg_upload_item_status {
+	color: #c62828;
+}
+
+.bg_upload_actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+.bg_upload_actions button:disabled {
+	opacity: .55;
+	cursor: not-allowed;
+}
+
+
+/* dev24: lightbox viewer + media interactions */
+.bg_media_preview {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	background: rgba(0,0,0,.08);
+}
+
+.bg_media_video_fallback {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	background: rgba(0,0,0,.25);
+}
+
+.bg_media_play {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background: rgba(0,0,0,.72);
+	color: #fff;
+}
+
+.bg_media_play svg {
+	width: 25px;
+	height: 25px;
+	margin-left: 3px;
+}
+
+.bg_media_social_counts {
+	display: flex;
+	gap: 10px;
+	margin-top: 6px;
+}
+
+.bg_lightbox[hidden] {
+	display: none !important;
+}
+
+.bg_lightbox {
+	position: fixed;
+	z-index: 99999;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.bg_lightbox_backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,.84);
+}
+
+.bg_lightbox_dialog {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+	width: min(1400px, 96vw);
+	height: min(900px, 92vh);
+	overflow: hidden;
+	border-radius: 12px;
+	background: #111;
+	color: #f5f5f5;
+	box-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+.bg_lightbox_stage {
+	min-width: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: #050505;
+}
+
+.bg_lightbox_stage img,
+.bg_lightbox_stage video {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+.bg_lightbox_stage video {
+	width: 100%;
+	height: 100%;
+}
+
+.bg_lightbox_info {
+	overflow: auto;
+	padding: 22px;
+	background: rgba(28,28,28,.98);
+}
+
+.bg_lightbox_info h3 {
+	margin-top: 0;
+	color: inherit;
+}
+
+.bg_lightbox_close,
+.bg_lightbox_nav {
+	position: absolute;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(0,0,0,.6);
+	color: #fff;
+	cursor: pointer;
+}
+
+.bg_lightbox_close {
+	top: 12px;
+	right: 372px;
+}
+
+.bg_lightbox_nav {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.bg_lightbox_prev {
+	left: 12px;
+}
+
+.bg_lightbox_next {
+	right: 372px;
+}
+
+.bg_lightbox_close svg,
+.bg_lightbox_nav svg {
+	width: 23px;
+	height: 23px;
+}
+
+.bg_like_button {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.bg_like_button svg {
+	width: 20px;
+	height: 20px;
+}
+
+.bg_like_button.is-liked svg path {
+	fill: currentColor;
+}
+
+.bg_comments_panel {
+	margin-top: 20px;
+	padding-top: 14px;
+	border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.bg_comments_list {
+	display: grid;
+	gap: 10px;
+	max-height: 320px;
+	overflow: auto;
+}
+
+.bg_comment {
+	padding: 9px 10px;
+	border-radius: 7px;
+	background: rgba(255,255,255,.07);
+}
+
+.bg_comment_head {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 4px;
+	font-size: .88em;
+}
+
+.bg_comment_delete {
+	border: 0;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	opacity: .7;
+}
+
+.bg_comment_form {
+	display: grid;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.bg_comment_form textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.bg_lightbox_message {
+	margin-top: 10px;
+	font-size: .9em;
+}
+
+.bg_lightbox_message:empty {
+	display: none;
+}
+
+.bg_lightbox_message.errorbox,
+.bg_lightbox_message.information {
+	display: block;
+	padding: 10px 12px;
+	border-radius: 0;
+	box-sizing: border-box;
+	text-shadow: none;
+}
+
+.bg_lightbox_message.errorbox {
+	border: 1px solid #c53939;
+	background: #fff1f1;
+	color: #6f1717 !important;
+}
+
+.bg_lightbox_message.information {
+	border: 1px solid #7b98af;
+	background: #eef6fb;
+	color: #203744 !important;
+}
+
+.bg_lightbox_message.errorbox *,
+.bg_lightbox_message.information * {
+	color: inherit !important;
+}
+
+body.bg_lightbox_open {
+	overflow: hidden;
+}
+
+@media (max-width: 850px) {
+	.bg_lightbox {
+		padding: 8px;
+	}
+
+	.bg_lightbox_dialog {
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(0, 60vh) minmax(0, 1fr);
+		width: 98vw;
+		height: 96vh;
+	}
+
+	.bg_lightbox_close {
+		right: 10px;
+	}
+
+	.bg_lightbox_next {
+		right: 10px;
+	}
+
+	.bg_lightbox_info {
+		padding: 15px;
+	}
+}
+
+
+/* dev25: full-size and download viewer actions */
+.bg_lightbox_actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 12px 0;
+}
+
+.bg_lightbox_action {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.bg_lightbox_action svg {
+	width: 18px;
+	height: 18px;
+	flex: 0 0 18px;
+}
+
+
+/* dev26: chunked album downloads */
+.bg_album_download_summary {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	margin-top: 12px;
+}
+
+.bg_album_download_parts {
+	display: grid;
+	gap: 8px;
+}
+
+.bg_album_download_part {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 10px 12px;
+	border: 1px solid rgba(127,127,127,.24);
+	border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+	.bg_album_download_part {
+		align-items: stretch;
+		flex-direction: column;
+	}
+}
+
+
+/* dev28: bulk media deletion */
+.bg_bulk_delete_form {
+	margin-bottom: 12px;
+}
+
+.bg_bulk_toolbar {
+	position: sticky;
+	top: 6px;
+	z-index: 25;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 10px 12px;
+	border: 1px solid rgba(127,127,127,.24);
+	border-radius: 8px;
+	background: inherit;
+	box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.bg_bulk_toolbar_left {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 7px;
+}
+
+.bg_bulk_toolbar_actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 7px;
+}
+
+.bg_bulk_delete_button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.bg_bulk_delete_button:not(:disabled) {
+	color: #c62828;
+}
+
+.bg_bulk_delete_button svg {
+	width: 18px;
+	height: 18px;
+}
+
+.bg_media_card_selectable {
+	position: relative;
+}
+
+.bg_media_bulk_select {
+	position: absolute;
+	z-index: 12;
+	top: 8px;
+	left: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 7px;
+	background: rgba(0,0,0,.68);
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 0 1px 5px rgba(0,0,0,.28);
+}
+
+.bg_media_bulk_select input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.bg_media_bulk_select span {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border: 2px solid currentColor;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.bg_media_bulk_select input:checked + span::after {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 0;
+	width: 5px;
+	height: 9px;
+	border: solid currentColor;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.bg_media_bulk_select:focus-within {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.bg_media_card.is-selected {
+	outline: 2px solid currentColor;
+	outline-offset: -2px;
+}
+
+@media (max-width: 700px) {
+	.bg_bulk_toolbar {
+		position: static;
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bg_bulk_toolbar_actions {
+		align-items: stretch;
+	}
+
+	.bg_bulk_toolbar_actions .button {
+		flex: 1 1 auto;
+	}
+}
+
+
+/* dev29: media pagination + sorting */
+.bg_media_toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
+	margin-bottom: 12px;
+}
+
+.bg_media_sort_form label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.bg_media_sort_form select {
+	max-width: 220px;
+}
+
+.bg_media_pages_top,
+.bg_media_pages_bottom {
+	margin: 10px 0 14px;
+}
+
+.bg_media_pages_bottom {
+	margin-top: 16px;
+	margin-bottom: 0;
+}
+
+@media (max-width: 650px) {
+	.bg_media_toolbar {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bg_media_sort_form label {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bg_media_sort_form select {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+
+/* dev30: favorites + reporting */
+.bg_lightbox_member_actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 10px 0;
+}
+
+.bg_favorite_button,
+.bg_report_button {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.bg_favorite_button svg,
+.bg_report_button svg {
+	width: 19px;
+	height: 19px;
+}
+
+.bg_favorite_button.is-favorited svg path {
+	fill: currentColor;
+}
+
+.bg_report_panel {
+	margin: 12px 0;
+	padding: 12px;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 8px;
+}
+
+.bg_report_panel form,
+.bg_report_panel label {
+	display: grid;
+	gap: 7px;
+}
+
+.bg_report_panel form {
+	gap: 10px;
+}
+
+.bg_report_panel textarea,
+.bg_report_panel select {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.bg_report_actions,
+.bg_comment_actions {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.bg_comment_report,
+.bg_comment_delete {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	opacity: .72;
+}
+
+.bg_comment_report svg {
+	width: 17px;
+	height: 17px;
+}
+
+.bg_favorite_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+	gap: 14px;
+}
+
+.bg_favorite_card {
+	overflow: hidden;
+	border: 1px solid rgba(127,127,127,.25);
+	border-radius: 9px;
+}
+
+.bg_favorite_preview {
+	display: block;
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	background: rgba(0,0,0,.08);
+}
+
+.bg_favorite_preview img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bg_favorite_placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-weight: 700;
+	opacity: .65;
+}
+
+.bg_favorite_body {
+	display: grid;
+	gap: 6px;
+	padding: 10px;
+}
+
+.bg_report_queue_toolbar {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.bg_report_table td {
+	vertical-align: top;
+}
+
+.bg_report_note {
+	margin-top: 7px;
+	padding: 7px;
+	border-radius: 6px;
+	background: rgba(127,127,127,.08);
+}
+
+.bg_report_decide_form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+
+/* dev30a: icon-only lightbox actions */
+.bg_lightbox_actions,
+.bg_lightbox_member_actions,
+.bg_lightbox_like_wrap {
+	align-items: center;
+}
+
+.bg_icon_button,
+a.bg_icon_button,
+button.bg_icon_button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 38px;
+	width: 38px;
+	min-width: 38px;
+	max-width: 38px;
+	height: 38px;
+	min-height: 38px;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	vertical-align: middle;
+	box-sizing: border-box;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.bg_icon_button svg,
+.bg_lightbox_action.bg_icon_button svg,
+.bg_favorite_button.bg_icon_button svg,
+.bg_report_button.bg_icon_button svg,
+.bg_like_button.bg_icon_button svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	flex: 0 0 20px;
+}
+
+.bg_icon_button_with_badge {
+	overflow: visible;
+}
+
+.bg_icon_badge {
+	position: absolute;
+	top: -6px;
+	right: -7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 18px;
+	height: 18px;
+	padding: 0 4px;
+	border-radius: 9px;
+	background: rgba(0,0,0,.78);
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 18px;
+	box-sizing: border-box;
+	pointer-events: none;
+}
+
+.bg_lightbox_like_wrap {
+	display: inline-flex;
+	margin-top: 0;
+}
+
+.bg_lightbox_member_actions,
+.bg_lightbox_actions {
+	margin: 8px 0;
+}
+
+
+/* dev30b: one-row lightbox action toolbar */
+.bg_lightbox_info > .bg_lightbox_actions,
+.bg_lightbox_info > .bg_lightbox_member_actions,
+.bg_lightbox_info > .bg_lightbox_like_wrap {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 8px;
+	margin: 8px 4px 8px 0;
+	vertical-align: middle;
+}
+
+.bg_lightbox_info > .bg_lightbox_like_wrap {
+	margin-right: 0;
+}
+
+/* Five 38px controls plus gaps fit the normal viewer sidebar.
+   Keep the toolbar from breaking into the old 2 + 2 + 1 pattern. */
+.bg_lightbox_info > .bg_lightbox_actions,
+.bg_lightbox_info > .bg_lightbox_member_actions {
+	width: auto;
+	max-width: none;
+}
+
+
+
+/* dev30d: album favorites + unique-view polish */
+.bg_album_favorite_form {
+	display: inline-block;
+	margin: 0;
+}
+
+.bg_album_favorite_button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+	min-height: 30px;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	box-sizing: border-box;
+	appearance: none;
+	-webkit-appearance: none;
+	vertical-align: middle;
+}
+
+.bg_album_favorite_button svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+}
+
+.bg_album_favorite_button.is-favorited svg path {
+	fill: currentColor;
+}
+
+.bg_favorites_tabs {
+	margin-bottom: 0;
+}
+
+
+/* dev31: permanent album deletion */
+.bg_album_delete_button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+	min-height: 30px;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.bg_album_delete_button svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+.bg_album_delete_confirm {
+	display: grid;
+	gap: 16px;
+}
+
+.bg_permanent_delete_warning p {
+	margin-bottom: 0;
+}
+
+.bg_delete_album_summary {
+	padding: 12px;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 8px;
+}
+
+.bg_delete_album_form {
+	display: grid;
+	gap: 14px;
+}
+
+.bg_delete_album_form label {
+	display: grid;
+	gap: 6px;
+}
+
+.bg_delete_confirm_check {
+	grid-template-columns: auto 1fr !important;
+	align-items: start;
+}
+
+.bg_delete_album_form input[type="text"] {
+	max-width: 520px;
+}
+
+.bg_delete_album_danger {
+	font-weight: 700;
+}
+
+
+/* dev31a: complete admin toolbar surfaces */
+.bg_admin_toolbar_surface {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	min-height: 42px;
+	padding: 8px 10px;
+	box-sizing: border-box;
+}
+
+.bg_admin_toolbar_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 4px;
+	margin: 0;
+}
+
+.bg_admin_toolbar_buttons::after {
+	display: none;
+}
+
+.bg_admin_toolbar_buttons .button {
+	margin: 0;
+}
+
+
+/* dev32: member gallery dashboard */
+.bg_member_stats_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+	gap: 10px;
+}
+
+.bg_member_stat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 92px;
+	text-align: center;
+}
+
+.bg_member_stat strong {
+	font-size: 1.65em;
+	line-height: 1.1;
+}
+
+.bg_member_stat span {
+	margin-top: 5px;
+	font-size: .9em;
+	opacity: .78;
+}
+
+.bg_dashboard_columns {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px;
+}
+
+.bg_dashboard_media_grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 10px;
+}
+
+.bg_dashboard_media_card {
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+	border: 1px solid rgba(127,127,127,.22);
+	border-radius: 8px;
+}
+
+.bg_dashboard_media_card img,
+.bg_dashboard_media_placeholder {
+	display: flex;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	align-items: center;
+	justify-content: center;
+	object-fit: cover;
+	background: rgba(127,127,127,.08);
+}
+
+.bg_dashboard_media_card > span:last-child {
+	display: grid;
+	gap: 2px;
+	padding: 7px;
+}
+
+.bg_dashboard_media_card small {
+	opacity: .72;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bg_dashboard_activity {
+	display: grid;
+	gap: 8px;
+}
+
+.bg_dashboard_activity_item {
+	padding: 9px 10px;
+	border: 1px solid rgba(127,127,127,.18);
+	border-radius: 7px;
+}
+
+.bg_dashboard_ranked {
+	display: grid;
+	gap: 5px;
+}
+
+.bg_dashboard_ranked > a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 8px 10px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(127,127,127,.16);
+}
+
+.bg_dashboard_ranked > a:last-child {
+	border-bottom: 0;
+}
+
+.bg_dashboard_ranked > a span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+	.bg_dashboard_columns {
+		grid-template-columns: 1fr;
+	}
+
+	.bg_dashboard_media_grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+
+/* dev32a: member storage quota meter */
+.bg_storage_quota_panel {
+	display: grid;
+	gap: 10px;
+}
+
+.bg_storage_quota_summary {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.bg_storage_quota_summary > div:first-child {
+	display: flex;
+	align-items: baseline;
+	gap: 7px;
+	flex-wrap: wrap;
+}
+
+.bg_storage_quota_summary strong {
+	font-size: 1.35em;
+}
+
+.bg_storage_meter {
+	position: relative;
+	height: 16px;
+	overflow: hidden;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 8px;
+	background: rgba(127,127,127,.12);
+}
+
+.bg_storage_meter_fill {
+	height: 100%;
+	width: 0;
+	background: currentColor;
+	opacity: .42;
+	transition: width .2s ease;
+}
+
+.bg_storage_meter.is-warning .bg_storage_meter_fill {
+	opacity: .68;
+}
+
+.bg_storage_meter.is-critical .bg_storage_meter_fill {
+	opacity: .92;
+}
+
+.bg_storage_percent {
+	text-align: right;
+}
+
+@media (max-width: 600px) {
+	.bg_storage_quota_summary {
+		align-items: start;
+		flex-direction: column;
+		gap: 5px;
+	}
+}
+
+
+/* dev32b: dashboard empty states belong directly to their parent surface */
+.bg_dashboard_empty_state {
+	margin: 0;
+	padding: 6px 8px;
+	opacity: .82;
+}
+
+
+/* dev33: portfolio mode */
+.bg_gallery_toolbar .smalltext br + br {
+	display: none;
+}
+
+.bg_gallery_toolbar > div:first-child {
+	min-width: 0;
+}
+
+.bg_gallery_toolbar > div:first-child .smalltext {
+	max-width: 760px;
+	line-height: 1.5;
+}
+
+
+/* dev33b: complete admin save/result message surfaces */
+.bg_admin_notice_surface {
+	padding: 12px 14px;
+	box-sizing: border-box;
+}
+
+.bg_admin_notice_success,
+.bg_admin_notice_error {
+	margin: 0;
+}
+
+
+/* dev34: Better Gallery identity + generic file cards */
+#main_menu .bg_menu_icon,
+.bg_menu_icon {
+	display: inline-flex;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: -3px;
+}
+
+#main_menu .bg_menu_icon svg,
+.bg_menu_icon svg,
+#main_menu .bg_menu_icon img,
+.bg_menu_icon img {
+	display: block;
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+}
+
+.bg_media_file_preview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 9px;
+	text-decoration: none;
+	background: rgba(127,127,127,.08);
+}
+
+.bg_media_file_preview_disabled {
+	cursor: default;
+}
+
+.bg_media_file_icon {
+	display: inline-flex;
+	width: 54px;
+	height: 54px;
+	align-items: center;
+	justify-content: center;
+	opacity: .78;
+}
+
+.bg_media_file_icon svg {
+	width: 48px;
+	height: 48px;
+}
+
+.bg_media_file_type {
+	font-weight: 700;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	opacity: .78;
+}
+
+
+/* dev34c: compact media-card stat icons */
+.bg_media_meta,
+.bg_media_social_counts,
+.bg_card_stats {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px 8px;
+}
+
+.bg_card_stat {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	white-space: nowrap;
+	line-height: 1;
+}
+
+.bg_card_stat svg {
+	display: block;
+	width: 13px;
+	height: 13px;
+	flex: 0 0 13px;
+}
+
+.bg_card_stat span {
+	line-height: 1;
+}
+
+
+/* dev34d: Better Gallery owns its menu icon; collapse SMF's native icon slot */
+#main_menu .main_icons.bg_media_no_native_icon {
+	display: none !important;
+	width: 0 !important;
+	min-width: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+}
+
+#main_menu #button_gallery > a,
+#main_menu li#button_gallery > a {
+	width: auto !important;
+	min-width: 0 !important;
+}
+
+#main_menu #button_gallery > a.active,
+#main_menu li#button_gallery > a.active {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/* dev34e: album cards stay fully clickable without link underlines */
+.bg_album_card,
+.bg_album_card:link,
+.bg_album_card:visited,
+.bg_album_card:hover,
+.bg_album_card:focus,
+.bg_album_card:active {
+	text-decoration: none !important;
+	text-decoration-line: none !important;
+}
+
+.bg_album_card *,
+.bg_album_card:hover *,
+.bg_album_card:focus * {
+	text-decoration: none !important;
+	text-decoration-line: none !important;
+}
+
+
+/* dev34f: card metadata in two clean rows */
+.bg_media_meta_primary {
+	display: block;
+	margin-top: 2px;
+	line-height: 1.35;
+}
+
+.bg_media_stats_row {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 8px;
+	margin-top: 4px;
+	line-height: 1;
+}
+
+.bg_media_stats_row .bg_card_stat {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	flex: 0 0 auto;
+	white-space: nowrap;
+}
+
+
+/* dev34h: aligned album capability rows + ON/OFF switches */
+.bg_album_toggle {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between;
+	gap: 18px;
+	width: 100%;
+	padding: 8px 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.bg_album_toggle_copy {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+	flex: 1 1 auto;
+}
+
+.bg_album_toggle_copy strong,
+.bg_album_toggle_copy .smalltext {
+	display: block;
+}
+
+.bg_switch {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	flex: 0 0 auto;
+	min-width: 82px;
+	justify-content: flex-end;
+}
+
+.bg_switch input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.bg_switch_track {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 24px;
+	flex: 0 0 44px;
+	border: 1px solid rgba(127,127,127,.40);
+	border-radius: 999px;
+	background: rgba(127,127,127,.20);
+	box-sizing: border-box;
+	transition: background-color .15s ease, border-color .15s ease;
+}
+
+.bg_switch_thumb {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: currentColor;
+	opacity: .72;
+	transition: transform .15s ease, opacity .15s ease;
+}
+
+.bg_switch input:checked + .bg_switch_track {
+	background: rgba(50,145,255,.22);
+	border-color: currentColor;
+}
+
+.bg_switch input:checked + .bg_switch_track .bg_switch_thumb {
+	transform: translateX(20px);
+	opacity: 1;
+}
+
+.bg_switch input:focus-visible + .bg_switch_track {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+.bg_switch_state {
+	min-width: 22px;
+	font-size: .88em;
+	font-weight: 700;
+	text-align: left;
+	opacity: .78;
+}
+
+@media (max-width: 600px) {
+	.bg_album_toggle {
+		align-items: flex-start !important;
+	}
+
+	.bg_switch {
+		margin-top: 2px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bg_switch_track,
+	.bg_switch_thumb {
+		transition: none;
+	}
+}
+
+
+/* dev34i: preserve lightbox control appearance while keyboard-focused */
+.bg_lightbox_close,
+.bg_lightbox_close:hover,
+.bg_lightbox_close:focus,
+.bg_lightbox_close:focus-visible,
+.bg_lightbox_close:active,
+.bg_lightbox_nav,
+.bg_lightbox_nav:hover,
+.bg_lightbox_nav:focus,
+.bg_lightbox_nav:focus-visible,
+.bg_lightbox_nav:active {
+	background: rgba(0,0,0,.6) !important;
+	color: #fff !important;
+	border: 0 !important;
+	box-shadow: none !important;
+}
+
+.bg_lightbox_close:focus-visible,
+.bg_lightbox_nav:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+
+/* dev35: Maintenance & Cleanup */
+.bg_maintenance_summary,
+.bg_maintenance_grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 12px;
+}
+
+.bg_maintenance_metric,
+.bg_maintenance_card {
+	padding: 14px;
+	border: 1px solid rgba(127,127,127,.25);
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.bg_maintenance_metric {
+	text-align: center;
+}
+
+.bg_maintenance_metric strong,
+.bg_maintenance_metric span,
+.bg_maintenance_card strong,
+.bg_maintenance_value {
+	display: block;
+}
+
+.bg_maintenance_metric strong,
+.bg_maintenance_value {
+	font-size: 1.55em;
+	line-height: 1.15;
+}
+
+.bg_maintenance_card p,
+.bg_maintenance_action p {
+	margin: 5px 0 0;
+}
+
+.bg_maintenance_card_attention {
+	border-color: rgba(155,44,44,.55);
+}
+
+.bg_maintenance_attention_list {
+	margin-top: 14px;
+	padding: 12px 14px;
+	border: 1px solid rgba(155,44,44,.45);
+	border-radius: 8px;
+}
+
+.bg_maintenance_attention_list ul {
+	margin-bottom: 0;
+}
+
+.bg_maintenance_table td:nth-child(2) {
+	width: 90px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.bg_maintenance_table td:nth-child(3) {
+	width: 130px;
+	text-align: center;
+}
+
+.bg_maintenance_actions {
+	display: grid;
+	gap: 0;
+	padding: 0;
+}
+
+.bg_maintenance_action {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	padding: 14px;
+	border-bottom: 1px solid rgba(127,127,127,.20);
+}
+
+.bg_maintenance_action:last-child {
+	border-bottom: 0;
+}
+
+.bg_maintenance_action > div {
+	min-width: 0;
+}
+
+.bg_maintenance_action form {
+	flex: 0 0 auto;
+	margin: 0;
+}
+
+@media (max-width: 650px) {
+	.bg_maintenance_action {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bg_maintenance_action .button {
+		width: 100%;
+	}
+}
+
+
+/* dev36: bulk move between albums */
+.bg_bulk_move_picker {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+}
+
+.bg_bulk_move_picker select {
+	max-width: 220px;
+	min-width: 150px;
+}
+
+.bg_bulk_move_button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.bg_bulk_move_button svg {
+	width: 18px;
+	height: 18px;
+	flex: 0 0 18px;
+}
+
+@media (max-width: 700px) {
+	.bg_bulk_move_picker {
+		align-items: stretch;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.bg_bulk_move_picker select {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+
+/* dev37: shared public action toolbar.
+ * Own spacing at the container level so active SMF themes cannot collapse the
+ * buttons into one another. Create Album stays reachable on every public
+ * Better Gallery screen for members who have permission. */
+.bg_media_action_bar {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0 0 12px;
+	padding: 10px 12px;
+	overflow: visible;
+}
+
+.bg_media_action_list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 7px;
+	width: 100%;
+	min-width: 0;
+}
+
+.bg_media_action_list > .button,
+.bg_media_action_list > a.button {
+	flex: 0 0 auto;
+	margin: 0 !important;
+	white-space: nowrap;
+}
+
+.bg_media_action_list > .button + .button,
+.bg_media_action_list > a.button + a.button {
+	margin-left: 0 !important;
+}
+
+.bg_media_action_list > .bg_media_create_album {
+	margin-left: 7px !important;
+}
+
+.bg_gallery_toolbar {
+	flex-wrap: wrap;
+}
+
+.bg_gallery_toolbar > .buttonlist {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 7px;
+	margin: 0;
+}
+
+.bg_gallery_toolbar > .buttonlist > .button {
+	margin: 0 !important;
+}
+
+@media (max-width: 700px) {
+	.bg_media_action_bar {
+		padding: 9px;
+	}
+
+	.bg_media_action_list {
+		justify-content: flex-start;
+		gap: 6px;
+	}
+
+	.bg_media_action_list > .bg_media_create_album {
+		margin-left: 0 !important;
+	}
+}
+
+
+/* dev38: final shared-action button separation + link-state authority.
+ *
+ * Some active SMF themes visually collapse neighboring .button anchors even
+ * inside a flex container. Give each Better Gallery action its own physical
+ * margin rather than relying on flex gap alone, and stop :visited/:link
+ * states from recoloring button labels. */
+.bg_media_action_list {
+	gap: 0 !important;
+}
+
+.bg_media_action_list > a.button,
+.bg_media_action_list > a.button:link,
+.bg_media_action_list > a.button:visited,
+.bg_media_action_list > a.button:hover,
+.bg_media_action_list > a.button:focus,
+.bg_media_action_list > a.button:active {
+	flex: 0 0 auto;
+	margin: 0 8px 0 0 !important;
+	text-decoration: none !important;
+	text-decoration-line: none !important;
+}
+
+.bg_media_action_list > a.button:last-child {
+	margin-right: 0 !important;
+}
+
+
+.bg_media_action_list > .bg_media_create_album {
+	margin-left: 4px !important;
+}
+
+@media (max-width: 700px) {
+	.bg_media_action_list > a.button,
+	.bg_media_action_list > a.button:link,
+	.bg_media_action_list > a.button:visited,
+	.bg_media_action_list > a.button:hover,
+	.bg_media_action_list > a.button:focus,
+	.bg_media_action_list > a.button:active {
+		margin-right: 6px !important;
+		margin-bottom: 6px !important;
+	}
+
+	.bg_media_action_list > .bg_media_create_album {
+		margin-left: 0 !important;
+	}
+}
+
+
+/* dev2zc: Gallery toolbar palette authority belongs to the active SMF theme.
+ * These links already use class="button" and class="button active".
+ * Do not override their foreground/background here; Curve 2 and Theme Lab
+ * should render them exactly like their other native buttons. */
+
+/* dev40: uploader interface polish.
+ * Keep long queues manageable, expose Upload at both ends of the queue, and
+ * keep Clear Queue visually separate from the primary upload action. */
+.bg_upload_queue {
+	max-height: 420px;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding-right: 4px;
+	scrollbar-gutter: stable;
+}
+
+.bg_upload_actions {
+	align-items: center;
+	column-gap: 14px;
+	row-gap: 8px;
+}
+
+.bg_upload_actions_top {
+	justify-content: flex-end;
+	margin-top: 12px;
+	margin-bottom: 10px;
+}
+
+.bg_upload_actions_top[hidden] {
+	display: none !important;
+}
+
+.bg_upload_primary_button {
+	font-weight: 700;
+}
+
+.bg_upload_clear_button,
+.bg_upload_clear_button:link,
+.bg_upload_clear_button:visited,
+.bg_upload_clear_button:hover,
+.bg_upload_clear_button:focus,
+.bg_upload_clear_button:active {
+	background: transparent !important;
+	background-image: none !important;
+	color: inherit !important;
+	border: 1px solid rgba(127,127,127,.45) !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	filter: none !important;
+}
+
+.bg_upload_clear_button:hover,
+.bg_upload_clear_button:focus {
+	background: rgba(127,127,127,.12) !important;
+}
+
+.bg_upload_clear_button:disabled {
+	background: transparent !important;
+	color: inherit !important;
+	opacity: .45 !important;
+}
+
+.bg_upload_overall {
+	margin: 8px 0 12px;
+	padding: 12px;
+	border: 1px solid rgba(127,127,127,.24);
+	border-radius: 8px;
+	background: rgba(127,127,127,.06);
+}
+
+.bg_upload_overall[hidden] {
+	display: none !important;
+}
+
+.bg_upload_overall_head {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.bg_upload_overall_track {
+	height: 12px;
+	overflow: hidden;
+	border-radius: 999px;
+	background: rgba(127,127,127,.18);
+}
+
+.bg_upload_overall_bar {
+	width: 0;
+	height: 100%;
+	background: currentColor;
+	opacity: .76;
+	transition: width .12s linear;
+}
+
+.bg_upload_overall_status {
+	margin-top: 7px;
+	overflow-wrap: anywhere;
+}
+
+.bg_uploader.is-compact-progress .bg_upload_item {
+	grid-template-columns: minmax(0, 1fr) auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.bg_uploader.is-compact-progress .bg_upload_item .bg_upload_progress,
+.bg_uploader.is-compact-progress .bg_upload_item .bg_upload_item_status {
+	display: none;
+}
+
+.bg_uploader.is-compact-progress .bg_upload_item.is-error .bg_upload_item_status {
+	display: block;
+}
+
+.bg_uploader.is-per-file-progress .bg_upload_overall {
+	display: none !important;
+}
+
+@media (max-width: 700px) {
+	.bg_upload_queue {
+		max-height: 360px;
+	}
+
+	.bg_upload_actions_top {
+		justify-content: flex-start;
+	}
+
+	.bg_upload_overall_head {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 2px;
+	}
+}
+
+
+/* dev41: uploader actions are contextual.
+ * Do not show Upload/Clear controls until the queue contains files. */
+.bg_upload_actions_top[hidden],
+.bg_upload_actions_bottom[hidden] {
+	display: none !important;
+}
+
+
+/* dev42: Album Likes.
+ * Album likes are social feedback; album favorites remain personal bookmarks. */
+.bg_gallery_toolbar > div:last-child {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 7px;
+}
+
+.bg_album_like_form,
+.bg_album_favorite_form {
+	display: inline-flex;
+	margin: 0;
+}
+
+.bg_album_like_button,
+.bg_album_favorite_button,
+.bg_album_delete_button {
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	margin: 0 !important;
+}
+
+.bg_album_like_button svg,
+.bg_album_favorite_button svg,
+.bg_album_delete_button svg {
+	display: block;
+	width: 18px;
+	height: 18px;
+	flex: 0 0 18px;
+}
+
+.bg_album_like_button.is-liked svg path {
+	fill: currentColor;
+}
+
+.bg_album_like_count {
+	min-width: 1ch;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+}
+
+@media (max-width: 700px) {
+	.bg_gallery_toolbar > div:last-child {
+		justify-content: flex-start;
+	}
+}
+/* dev50d: keep the Settings save action in normal flow above PHP Upload Limits. */
+.bg_admin_save_row {
+	display: flex;
+	justify-content: flex-end;
+	clear: both;
+	margin: 8px 0 14px;
+}
+
+.bg_admin_save_row .button {
+	margin: 0;
+}
+
+
+/* Better Gallery dev51: optional Better Reactions integration. */
+.bg_lightbox_like_wrap.bg_br_enabled,
+.bg_br_comment {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: .45rem;
+	flex-wrap: wrap;
+}
+.bg_br_enabled .bg_like_button,
+.bg_br_comment_trigger {
+	display: inline-flex;
+	align-items: center;
+	gap: .35rem;
+}
+.bg_br_tray {
+	position: absolute;
+	left: 0;
+	bottom: calc(100% + 6px);
+	display: flex;
+	gap: 3px;
+	padding: 6px 8px;
+	border: 1px solid rgba(0,0,0,.18);
+	border-radius: 999px;
+	background: var(--bg-surface, #fff);
+	box-shadow: 0 5px 18px rgba(0,0,0,.18);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(4px);
+	transition: opacity .14s ease, transform .14s ease, visibility .14s ease;
+	z-index: 10020;
+	white-space: nowrap;
+}
+.bg_br_enabled:hover > .bg_br_tray,
+.bg_br_enabled:focus-within > .bg_br_tray,
+.bg_br_comment:hover > .bg_br_tray,
+.bg_br_comment:focus-within > .bg_br_tray {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.bg_br_choice,
+.bg_br_comment_trigger,
+.bg_br_count {
+	appearance: none;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	line-height: 1;
+}
+.bg_br_choice {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	transition: transform .12s ease, background .12s ease;
+}
+.bg_br_choice:hover,
+.bg_br_choice:focus,
+.bg_br_choice.is-selected {
+	transform: scale(1.16);
+	background: rgba(0,0,0,.07);
+}
+.bg_br_icon_image { width: 24px; height: 24px; object-fit: contain; }
+.bg_br_summary { display: inline-flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.bg_br_count {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	padding: 4px 7px;
+	border: 1px solid rgba(0,0,0,.14);
+	border-radius: 999px;
+	font-size: 13px;
+	background: rgba(255,255,255,.72);
+}
+.bg_br_count.is-mine { font-weight: 700; }
+.bg_br_who {
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 8px);
+	transform: translateX(-50%);
+	z-index: 10030;
+	min-width: 150px;
+	max-width: 260px;
+	padding: 8px 10px;
+	border: 1px solid rgba(127,127,127,.28);
+	border-radius: 8px;
+	background: var(--bg-br-who-bg, #fff);
+	box-shadow: 0 8px 24px rgba(0,0,0,.18);
+	font-size: 12px;
+	line-height: 1.35;
+	text-align: left;
+	white-space: normal;
+	color: #20252b;
+}
+.bg_br_who::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	width: 10px;
+	height: 10px;
+	background: inherit;
+	border-right: 1px solid rgba(127,127,127,.28);
+	border-bottom: 1px solid rgba(127,127,127,.28);
+	transform: translate(-50%, -5px) rotate(45deg);
+}
+.bg_br_who_title {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-weight: 700;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(127,127,127,.18);
+}
+.bg_br_who_title .bg_br_icon_image { width: 18px; height: 18px; }
+.bg_br_who_title .bg_br_icon_glyph { font-size: 18px; line-height: 1; }
+.bg_br_who_list {
+	max-height: 190px;
+	overflow-y: auto;
+}
+.bg_br_who_name {
+	padding: 3px 0;
+	color: #20252b;
+	font-weight: 600;
+}
+.bg_br_who_profile {
+	color: #1f5f9e !important;
+	text-decoration: none !important;
+}
+.bg_br_who_profile:hover,
+.bg_br_who_profile:focus-visible { text-decoration: underline !important; }
+.bg_br_who_more {
+	display: block;
+	margin-top: 4px;
+	font-size: 11px;
+	opacity: .72;
+}
+@media (prefers-color-scheme: dark) {
+	.bg_br_who {
+		--bg-br-who-bg: #222831;
+		color: #f4f7fa;
+	}
+	.bg_br_who_name { color: #f4f7fa; }
+	.bg_br_who_profile { color: #9bc8ff !important; }
+	.bg_br_who_more { color: #d9e0e7; }
+}
+.bg_br_comment { margin-top: 7px; }
+.bg_br_comment_trigger { padding: 3px 5px; font-size: 18px; }
+
+/* Better Gallery dev51b: theme-native reactions toolbar + comment composer polish. */
+/* Keep the Better Reactions trigger in the same action row whenever the sidebar has room. */
+.bg_lightbox_info > .bg_lightbox_like_wrap.bg_br_enabled {
+	display: inline-flex;
+	width: auto;
+	max-width: 100%;
+	margin: 8px 0;
+	gap: 7px;
+	overflow: visible;
+	vertical-align: middle;
+}
+
+/* The trigger keeps SMF's .button class so the active theme owns its palette. */
+.bg_br_enabled .bg_like_button.bg_br_like_trigger,
+button.bg_br_like_trigger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	width: auto;
+	min-width: 0;
+	max-width: none;
+	height: 38px;
+	min-height: 38px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0;
+	font: inherit;
+	font-weight: 600;
+	line-height: 1.2;
+	cursor: pointer;
+}
+
+.bg_br_enabled .bg_br_like_trigger .bg_br_icon_glyph {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.bg_br_enabled .bg_br_like_trigger .bg_br_icon_image {
+	width: 20px;
+	height: 20px;
+}
+
+.bg_br_enabled > .bg_br_tray {
+	left: 0;
+	bottom: calc(100% + 5px);
+}
+
+.bg_br_enabled .bg_br_summary {
+	min-height: 30px;
+}
+
+.bg_br_enabled .bg_br_count {
+	background: rgba(127, 127, 127, .10);
+	border-color: rgba(127, 127, 127, .18);
+	color: inherit;
+}
+
+.bg_br_enabled .bg_br_count .bg_br_icon_glyph {
+	font-size: 15px;
+}
+
+/* The lightbox is a dark surface; never force a white comment editor into it. */
+.bg_lightbox_info .bg_comment_form textarea,
+.bg_lightbox_info #bg_comment_body {
+	background: rgba(255, 255, 255, .08);
+	color: inherit;
+	border: 1px solid rgba(255, 255, 255, .20);
+	box-shadow: none;
+}
+
+.bg_lightbox_info .bg_comment_form textarea:focus,
+.bg_lightbox_info #bg_comment_body:focus {
+	background: rgba(255, 255, 255, .11);
+	border-color: currentColor;
+	outline: none;
+}
+
+.bg_lightbox_info .bg_comment_form textarea::placeholder,
+.bg_lightbox_info #bg_comment_body::placeholder {
+	color: inherit;
+	opacity: .62;
+}
+
+@media (max-width: 700px) {
+	.bg_lightbox_info > .bg_lightbox_like_wrap.bg_br_enabled {
+		margin-top: 8px;
+	}
+}
+
+/* Better Gallery dev51c: unified viewer action toolbar + authoritative dark comment editor. */
+.bg_lightbox_toolbar {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	width: 100%;
+	margin: 8px 0;
+	overflow: visible;
+}
+
+/* These are grouping wrappers only; the toolbar owns the layout now. */
+.bg_lightbox_toolbar > .bg_lightbox_actions,
+.bg_lightbox_toolbar > .bg_lightbox_member_actions {
+	display: contents;
+	margin: 0;
+}
+
+.bg_lightbox_toolbar > .bg_lightbox_like_wrap,
+.bg_lightbox_toolbar > .bg_lightbox_like_wrap.bg_br_enabled {
+	margin: 0;
+	vertical-align: middle;
+}
+
+/* Keep the reaction trigger compact enough to share the normal viewer action row. */
+.bg_lightbox_toolbar .bg_br_like_trigger {
+	height: 38px;
+	min-height: 38px;
+	padding-left: 9px;
+	padding-right: 9px;
+	white-space: nowrap;
+}
+
+/* The active theme may style textarea controls globally. The lightbox is its own
+   dark surface, so this scoped rule intentionally wins only inside the viewer. */
+.bg_lightbox #bg_comment_form #bg_comment_body,
+.bg_lightbox .bg_comment_form textarea#bg_comment_body {
+	background: rgba(0, 0, 0, .30) !important;
+	background-image: none !important;
+	color: #f2f2f2 !important;
+	-webkit-text-fill-color: #f2f2f2 !important;
+	caret-color: #f2f2f2;
+	border: 1px solid rgba(255, 255, 255, .22) !important;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .22) !important;
+	color-scheme: dark;
+}
+
+.bg_lightbox #bg_comment_form #bg_comment_body:focus,
+.bg_lightbox .bg_comment_form textarea#bg_comment_body:focus {
+	background: rgba(0, 0, 0, .38) !important;
+	background-image: none !important;
+	border-color: rgba(255, 255, 255, .48) !important;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, .10) !important;
+	outline: none !important;
+}
+
+.bg_lightbox #bg_comment_form #bg_comment_body::placeholder,
+.bg_lightbox .bg_comment_form textarea#bg_comment_body::placeholder {
+	color: rgba(242, 242, 242, .62) !important;
+	-webkit-text-fill-color: rgba(242, 242, 242, .62) !important;
+	opacity: 1;
+}
+
+
+/* Better Gallery dev51d: toolbar action + dedicated reaction results row. */
+.bg_lightbox_reaction_summary {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	width: 100%;
+	min-height: 0;
+	margin: -2px 0 10px;
+	overflow: visible;
+}
+
+.bg_lightbox_reaction_summary[hidden] {
+	display: none !important;
+}
+
+/* The summary owns only result pills; the Like trigger remains in the toolbar. */
+.bg_lightbox_reaction_summary.bg_br_summary {
+	position: relative;
+}
+
+.bg_lightbox_toolbar .bg_lightbox_like_wrap.bg_br_enabled .bg_br_summary {
+	display: none !important;
+}
+
+
+/* Better Gallery dev51e: unclipped floating media reaction picker. */
+/* The viewer sidebar scrolls with overflow:auto, which is a hard clipping boundary.
+   The media picker is portaled to the lightbox root while open so it can spill beyond
+   the sidebar without disabling scrolling or breaking the dialog's rounded clipping. */
+.bg_lightbox > .bg_br_tray.bg_br_tray_floating {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	z-index: 100000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(4px);
+	pointer-events: none;
+}
+
+.bg_lightbox > .bg_br_tray.bg_br_tray_floating.is-open {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+
+/* Better Gallery dev51g: plain inline comment reaction trigger + unclipped comment reactions. */
+.bg_comment .bg_br_comment {
+	display: grid;
+	grid-template-columns: max-content minmax(0, 1fr);
+	align-items: center;
+	gap: 6px 8px;
+	margin-top: 8px;
+	padding-top: 7px;
+	border-top: 1px solid rgba(255, 255, 255, .10);
+	position: relative;
+}
+
+.bg_comment .bg_br_comment_trigger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 5px;
+	width: auto;
+	min-width: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: inherit;
+	font: inherit;
+	font-size: .84em;
+	line-height: 1.2;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.bg_comment .bg_br_comment_trigger:hover,
+.bg_comment .bg_br_comment_trigger:focus-visible {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+.bg_comment .bg_br_comment_trigger:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 3px;
+}
+
+.bg_comment .bg_br_comment_trigger .bg_br_icon_glyph,
+.bg_comment .bg_br_comment_trigger .bg_br_icon_image {
+	width: 18px;
+	height: 18px;
+	font-size: 17px;
+	line-height: 18px;
+}
+
+.bg_comment .bg_br_comment_summary {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 4px;
+	min-width: 0;
+}
+
+.bg_comment .bg_br_comment_summary[hidden] {
+	display: none !important;
+}
+
+.bg_comment .bg_br_comment_summary .bg_br_count {
+	padding: 3px 6px;
+	background: rgba(255, 255, 255, .10);
+	border-color: rgba(255, 255, 255, .16);
+	color: inherit;
+}
+
+/* Comment lists scroll independently, so their picker must portal to the lightbox root too. */
+.bg_lightbox > .bg_br_tray.bg_br_comment_tray_floating {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	z-index: 100010;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(4px);
+	pointer-events: none;
+}
+
+.bg_lightbox > .bg_br_tray.bg_br_comment_tray_floating.is-open {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+/* Who Reacted also escapes both the sidebar and nested comments scroller. */
+.bg_lightbox > .bg_br_who.bg_br_who_floating {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	z-index: 100020;
+}
+
+/* Better Gallery dev51h: first-class album reactions. */
+.bg_album_reaction_wrap {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	position: relative;
+}
+
+.bg_album_reaction_trigger {
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	margin: 0 !important;
+	white-space: nowrap;
+}
+
+.bg_album_reaction_trigger .bg_br_icon_glyph {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.bg_album_reaction_trigger .bg_br_icon_image {
+	width: 19px;
+	height: 19px;
+}
+
+.bg_album_reaction_summary {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin: 8px 0 0;
+	min-height: 0;
+}
+
+.bg_album_reaction_summary[hidden] {
+	display: none !important;
+}
+
+.bg_album_reaction_summary .bg_br_count {
+	background: rgba(127, 127, 127, .10);
+	border-color: rgba(127, 127, 127, .18);
+	color: inherit;
+}
+
+body > .bg_album_reaction_tray.bg_album_reaction_tray_floating {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	z-index: 100030;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(4px);
+	pointer-events: none;
+}
+
+body > .bg_album_reaction_tray.bg_album_reaction_tray_floating.is-open {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+body > .bg_album_reactors_popover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	z-index: 100040;
+}
+
+
+/* Better Gallery dev51i: keep album reaction results with the right-side action cluster. */
+.bg_gallery_toolbar > div:last-child {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.bg_gallery_toolbar > div:last-child .bg_album_reaction_summary {
+	flex: 0 1 100%;
+	justify-content: flex-end;
+	margin: 2px 0 0 auto;
+	width: 100%;
+}
+
+@media (max-width: 640px) {
+	.bg_gallery_toolbar {
+		align-items: flex-start;
+	}
+
+	.bg_gallery_toolbar > div:last-child .bg_album_reaction_summary {
+		justify-content: flex-start;
+	}
+}
+
+/* Better Gallery dev51j: transient Who Reacted overlays. */
+.bg_br_who_floating, .bg_album_reactors_popover {
+	max-width: min(320px, calc(100vw - 16px));
+}
+
+
+/* Better Gallery dev51k: topic-style Who Reacted presentation. */
+.bg_br_who_floating,
+.bg_album_reactors_popover {
+	transform: none;
+}
+.bg_br_who_floating::after,
+.bg_album_reactors_popover::after {
+	left: 22px;
+}
+
+/* Better Gallery dev51l: page-anchored album reaction tray.
+   Album pages scroll, so keep the tray in document coordinates above the Like trigger.
+   It now scrolls away naturally with the album instead of tracking the viewport. */
+
+/* Better Gallery dev51m: authoritative dark Better Reactions surfaces in Media.
+   Album pickers are portaled to <body> and lightbox pickers/popovers are portaled
+   to .bg_lightbox, so style the Better Gallery reaction classes directly rather
+   than depending on ancestor context that disappears while overlays are open. */
+.bg_br_tray,
+.bg_album_reaction_tray,
+.bg_lightbox > .bg_br_tray,
+body > .bg_album_reaction_tray {
+	--bg-surface: #151515;
+	background: #151515 !important;
+	background-image: none !important;
+	border-color: rgba(255,255,255,.18) !important;
+	color: #f5f5f5 !important;
+	box-shadow: 0 8px 28px rgba(0,0,0,.48) !important;
+	color-scheme: dark;
+}
+
+.bg_br_tray .bg_br_choice,
+.bg_album_reaction_tray .bg_br_choice {
+	color: #f5f5f5 !important;
+}
+
+.bg_br_tray .bg_br_choice:hover,
+.bg_br_tray .bg_br_choice:focus,
+.bg_br_tray .bg_br_choice.is-selected,
+.bg_album_reaction_tray .bg_br_choice:hover,
+.bg_album_reaction_tray .bg_br_choice:focus,
+.bg_album_reaction_tray .bg_br_choice.is-selected {
+	background: rgba(255,255,255,.12) !important;
+}
+
+.bg_br_who,
+.bg_br_who_floating,
+.bg_album_reactors_popover,
+body > .bg_album_reactors_popover,
+.bg_lightbox > .bg_br_who.bg_br_who_floating {
+	--bg-br-who-bg: #1b1b1b;
+	background: #1b1b1b !important;
+	background-image: none !important;
+	border-color: rgba(255,255,255,.18) !important;
+	color: #f5f5f5 !important;
+	box-shadow: 0 10px 30px rgba(0,0,0,.52) !important;
+	color-scheme: dark;
+}
+
+.bg_br_who_name,
+.bg_album_reactors_popover .bg_br_who_name {
+	color: #f5f5f5 !important;
+}
+
+.bg_br_who_profile,
+.bg_album_reactors_popover .bg_br_who_profile {
+	color: #9bc8ff !important;
+}
+
+.bg_album_reaction_summary .bg_br_count,
+.bg_lightbox_reaction_summary .bg_br_count,
+.bg_lightbox .bg_br_count,
+.bg_comment .bg_br_comment_summary .bg_br_count {
+	background: rgba(0,0,0,.38) !important;
+	border-color: rgba(255,255,255,.18) !important;
+	color: #f5f5f5 !important;
+}
+
+/* The viewer itself is intentionally immersive and dark. These selectors are
+   authoritative against active-theme .windowbg / generic panel overrides. */
+.bg_lightbox,
+.bg_lightbox_dialog,
+.bg_lightbox_stage,
+.bg_lightbox_info {
+	color-scheme: dark;
+}
+
+.bg_lightbox_dialog {
+	background: #111 !important;
+	color: #f5f5f5 !important;
+}
+
+.bg_lightbox_stage {
+	background: #050505 !important;
+}
+
+.bg_lightbox_info {
+	background: #1c1c1c !important;
+	color: #f5f5f5 !important;
+}
+
+
+/* dev2b: Better Gallery admin spacing and compact-control readability. */
+.bg_gallery_settings_form dl.settings dd input[type="number"] {
+	box-sizing: border-box;
+	width: 5.5em;
+	min-width: 64px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+.bg_admin_row_actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.bg_admin_row_actions form {
+	display: inline-flex;
+	margin: 0;
+}
+
+.bg_admin_row_actions .button {
+	margin: 0 !important;
+}
+
+/* dev2p: keep Better Gallery in SMF's native main-menu icon slot, but size the
+   branded artwork to the same visual weight as the surrounding 16-18px icons.
+   The PNG has a little transparent padding, so a 20px rendered box produces an
+   approximately 17px visible icon without changing the menu line-height. */
+#main_menu .main_icons.bg_gallery_nav {
+	background-image: url('../images/BetterGallery/gallery_menu.png') !important;
+	background-position: center center !important;
+	background-size: 20px 20px !important;
+	background-repeat: no-repeat !important;
+}
+
+#main_menu .main_icons.bg_gallery_nav::before {
+	content: '' !important;
+	background: none !important;
+}
+
+/* dev2d: use the Better Gallery branded icon in the Configuration dropdown too. */
+a[href*="area=bettergallery"] .main_icons,
+a[href*="area=bettergallery"] .main_icons::before {
+	box-sizing: border-box;
+}
+
+a[href*="area=bettergallery"] .main_icons {
+	display: inline-block !important;
+	width: 18px !important;
+	height: 18px !important;
+	min-width: 18px !important;
+	margin-right: 7px !important;
+	vertical-align: middle !important;
+	background: transparent url('../images/BetterGallery/gallery_menu.png') center center / contain no-repeat !important;
+	color: transparent !important;
+	overflow: hidden !important;
+	text-indent: -9999px !important;
+}
+
+a[href*="area=bettergallery"] .main_icons::before {
+	content: '' !important;
+	background: none !important;
+}
+
+/* dev2i: image download busy state */
+#bg_download_link.is-busy {
+    opacity: .58;
+    cursor: wait;
+}
+
+
+/* dev2l: optional external integration-slot hosts. */
+.bg_gallery_ad_slot {
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
+}
+.bg_gallery_ad_index_top,
+.bg_gallery_ad_index_bottom,
+.bg_gallery_ad_album_top,
+.bg_gallery_ad_album_bottom {
+	margin: 12px 0;
+}
+.bg_media_grid > .bg_gallery_ad_repeat {
+	margin: 4px 0;
+}
+.bg_media_grid > .bg_gallery_ad_repeat_row {
+	grid-column: 1 / -1;
+}
+.bg_media_grid > .bg_gallery_ad_repeat_card {
+	grid-column: auto;
+	min-width: 0;
+	margin: 0;
+}
+
+
+
+
+/* dev2zdd: generic lightbox integration metadata slot */
+.bg_lightbox_integrations {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 8px 0 10px;
+}
+.bg_lightbox_integrations[hidden] { display: none !important; }
+
+
+/* dev2zddb: Theme Lab album header polish + button link-state authority. */
+.bg_album_header_panel {
+	padding: 0 !important;
+}
+
+.bg_album_header_toolbar {
+	box-sizing: border-box;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 18px;
+	padding: 12px 12px 6px;
+}
+
+.bg_album_summary {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.bg_album_owner {
+	margin: 0 0 2px;
+}
+
+.bg_album_category {
+	margin: 0;
+}
+
+.bg_album_actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 7px;
+	flex: 0 0 auto;
+}
+
+.bg_album_actions > a.button,
+.bg_album_actions > a.button:link,
+.bg_album_actions > a.button:visited,
+.bg_album_actions > a.button:hover,
+.bg_album_actions > a.button:focus,
+.bg_album_actions > a.button:active,
+.bg_media_action_list > a.button,
+.bg_media_action_list > a.button:link,
+.bg_media_action_list > a.button:visited,
+.bg_media_action_list > a.button:hover,
+.bg_media_action_list > a.button:focus,
+.bg_media_action_list > a.button:active {
+	color: var(--tl-button-secondary-text, #444) !important;
+	-webkit-text-fill-color: var(--tl-button-secondary-text, #444) !important;
+	text-decoration: none !important;
+}
+
+.bg_media_action_list > a.button.active,
+.bg_media_action_list > a.button.active:link,
+.bg_media_action_list > a.button.active:visited,
+.bg_media_action_list > a.button.active:hover,
+.bg_media_action_list > a.button.active:focus,
+.bg_media_action_list > a.button.active:active {
+	color: var(--tl-button-primary-text, #fff) !important;
+	-webkit-text-fill-color: var(--tl-button-primary-text, #fff) !important;
+}
+
+.bg_album_metadata {
+	padding: 0 12px 12px;
+}
+
+.bg_album_metadata .better_tags_gallery_album_bar {
+	margin: 4px 0 8px;
+}
+
+.bg_album_description {
+	margin: 4px 0 0 !important;
+}
+
+@media (max-width: 760px) {
+	.bg_album_header_toolbar {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 10px;
+	}
+	.bg_album_actions {
+		justify-content: flex-start;
+	}
+}
